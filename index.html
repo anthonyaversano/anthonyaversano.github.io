@@ -7,6 +7,14 @@
     <title>Anthony Aversano | Finance Portfolio</title>
 
     <style>
+        :root {
+            --rutgers-red: #cc0033;
+            --rutgers-dark-red: #990026;
+            --text: #283444;
+            --light: #f7f7f9;
+            --border: #e5e7eb;
+        }
+
         * {
             margin: 0;
             padding: 0;
@@ -20,29 +28,52 @@
         body {
             font-family: Arial, Helvetica, sans-serif;
             line-height: 1.6;
-            color: #243247;
-            background-color: #f4f7fb;
+            color: var(--text);
+            background: var(--light);
         }
 
         header {
-            background-color: #10243e;
+            background: linear-gradient(
+                135deg,
+                var(--rutgers-dark-red),
+                var(--rutgers-red)
+            );
             color: white;
-            padding: 45px 20px;
+            padding: 48px 20px;
             text-align: center;
         }
 
+        .hero {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .headshot {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid white;
+            background: #f1f1f1;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
+
         header h1 {
-            font-size: 2.5rem;
-            margin-bottom: 8px;
+            font-size: clamp(2rem, 5vw, 2.7rem);
+            margin-bottom: 5px;
         }
 
         header p {
-            color: #c9d8eb;
-            font-size: 1.1rem;
+            color: #fff0f3;
+            font-size: 1.08rem;
         }
 
         nav {
-            background-color: #183858;
+            background: #222630;
             padding: 14px;
             text-align: center;
         }
@@ -55,7 +86,7 @@
         }
 
         nav a:hover {
-            color: #8fc7ff;
+            color: #ffb8c8;
         }
 
         main {
@@ -65,19 +96,20 @@
         }
 
         section {
-            background-color: white;
+            background: white;
             padding: 30px;
             margin-bottom: 25px;
             border-radius: 12px;
-            box-shadow: 0 3px 12px rgba(16, 36, 62, 0.07);
+            border-top: 4px solid var(--rutgers-red);
+            box-shadow: 0 3px 12px rgba(24, 35, 51, 0.07);
         }
 
         h2 {
-            color: #10243e;
+            color: var(--rutgers-dark-red);
             font-size: 1.6rem;
             margin-bottom: 16px;
-            border-bottom: 2px solid #dce8f5;
             padding-bottom: 8px;
+            border-bottom: 2px solid #f3d5dd;
         }
 
         .skills {
@@ -87,8 +119,9 @@
         }
 
         .skill {
-            background-color: #e8f1fb;
-            color: #183858;
+            background: #fff0f3;
+            color: #8f0025;
+            border: 1px solid #f2c6d1;
             padding: 8px 13px;
             border-radius: 20px;
             font-size: 0.95rem;
@@ -96,7 +129,7 @@
 
         .project {
             padding: 18px 0;
-            border-bottom: 1px solid #e5eaf0;
+            border-bottom: 1px solid var(--border);
         }
 
         .project:last-child {
@@ -104,7 +137,7 @@
         }
 
         .project h3 {
-            color: #183858;
+            color: #8f0025;
             margin-bottom: 7px;
         }
 
@@ -113,7 +146,7 @@
         }
 
         .project a {
-            color: #1769aa;
+            color: #a0002a;
             font-weight: bold;
             text-decoration: none;
         }
@@ -123,18 +156,14 @@
         }
 
         footer {
-            background-color: #10243e;
-            color: #c9d8eb;
+            background: #222630;
+            color: #f0dfe3;
             text-align: center;
             padding: 22px;
             margin-top: 40px;
         }
 
         @media (max-width: 600px) {
-            header h1 {
-                font-size: 2rem;
-            }
-
             nav a {
                 display: inline-block;
                 margin: 5px 10px;
@@ -150,8 +179,18 @@
 <body>
 
     <header>
-        <h1>Anthony Aversano</h1>
-        <p>Rutgers Business School | Finance</p>
+        <div class="hero">
+            <img
+                class="headshot"
+                src="headshot.jpg"
+                alt="Headshot of Anthony Aversano"
+            >
+
+            <div>
+                <h1>Anthony Aversano</h1>
+                <p>Rutgers Business School | Finance</p>
+            </div>
+        </div>
     </header>
 
     <nav>
@@ -164,6 +203,7 @@
 
         <section id="about">
             <h2>Personal Statement</h2>
+
             <p>
                 I am a Finance student at Rutgers Business School interested
                 in wealth management and developing the analytical, financial,
@@ -174,6 +214,7 @@
 
         <section id="skills">
             <h2>Skills</h2>
+
             <div class="skills">
                 <span class="skill">Financial Services Fundamentals</span>
                 <span class="skill">Banking and Lending Concepts</span>
@@ -187,11 +228,19 @@
         </section>
 
         <section id="projects">
-            <h2>Projects & Professional Development</h2>
+            <h2>Projects &amp; Professional Development</h2>
 
             <div class="project">
-                <h3>PNC: Overview of Financial Services and Banking</h3>
-                <p><strong>Forage Job Simulation | September 2026</strong></p>
+                <h3>
+                    PNC: Overview of Financial Services and Banking
+                </h3>
+
+                <p>
+                    <strong>
+                        Forage Job Simulation | September 2026
+                    </strong>
+                </p>
+
                 <p>
                     Completed a job simulation exploring the financial
                     services industry, banking operations, lending decisions,
@@ -201,29 +250,18 @@
             </div>
 
             <div class="project">
-                <h3>Financial and Business Coursework</h3>
-                <p>
-                    Relevant coursework and assignments focused on financial
-                    concepts, business problem-solving, and quantitative
-                    analysis.
-                </p>
-                <p><em>
-                    Replace this description with a specific completed
-                    assignment or project.
-                </em></p>
-            </div>
+                <h3>Bank of America Private Bank Job Simulation</h3>
 
-            <div class="project">
-                <h3>Career Exploration in Wealth Management</h3>
                 <p>
-                    Developing knowledge of wealth management, financial
-                    services careers, and the role of client relationships
-                    in helping individuals pursue their financial goals.
+                    <strong>Forage Job Simulation</strong>
                 </p>
-                <p><em>
-                    Replace this entry with a completed project or remove it
-                    if you do not have a related project yet.
-                </em></p>
+
+                <p>
+                    Explored private banking and wealth management through a
+                    job simulation focused on understanding client needs,
+                    financial planning considerations, and tailored financial
+                    solutions.
+                </p>
             </div>
 
         </section>
