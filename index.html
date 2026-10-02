@@ -129,12 +129,17 @@
         }
 
         .project {
-            padding: 19px 0;
+            padding: 22px 0;
             border-bottom: 1px solid #e7e8ec;
+        }
+
+        .project:first-of-type {
+            padding-top: 0;
         }
 
         .project:last-child {
             border-bottom: none;
+            padding-bottom: 0;
         }
 
         .project h3 {
@@ -147,6 +152,22 @@
             color: #626d7b;
             font-size: 0.94rem;
             margin-bottom: 8px;
+        }
+
+        .certificate-link {
+            display: inline-block;
+            margin-top: 10px;
+            background: var(--red);
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 8px 14px;
+            border-radius: 5px;
+        }
+
+        .certificate-link:hover,
+        .certificate-link:focus {
+            background: var(--dark-red);
         }
 
         footer {
@@ -238,29 +259,47 @@
                 </h3>
 
                 <p class="project-meta">
-                    Forage Job Simulation | September 2026
+                    Forage Job Simulation | September 12, 2026
                 </p>
 
                 <p>
-                    Completed a job simulation exploring the financial
-                    services industry, banking operations, lending decisions,
-                    risk management, regulatory compliance, and customer
-                    relationships.
+                    Completed practical tasks exploring the financial
+                    services industry and banking, including banking
+                    operations, lending decisions, risk management,
+                    regulatory compliance, and customer relationships.
                 </p>
+
+                <a
+                    class="certificate-link"
+                    href="./pnc-certificate.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Certificate
+                </a>
             </article>
 
             <article class="project">
-                <h3>Bank of America Private Bank Job Simulation</h3>
+                <h3>The Private Bank Job Simulation</h3>
 
                 <p class="project-meta">
-                    Forage Job Simulation
+                    Bank of America | Forage | May 2, 2026
                 </p>
 
                 <p>
-                    Explored private banking and wealth management through
-                    a job simulation focused on client needs, financial
-                    planning considerations, and tailored financial solutions.
+                    Completed practical tasks in client account servicing
+                    and communication, uncovering client goals and priorities,
+                    and matching client goals to appropriate strategies.
                 </p>
+
+                <a
+                    class="certificate-link"
+                    href="./private-bank-certificate.pdf"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    View Certificate
+                </a>
             </article>
 
         </section>
