@@ -2,221 +2,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Anthony Aversano | Finance Portfolio</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anthony Aversano | Finance Portfolio</title>
 
-<style>
-:root {
-    --red: #cc0033;
-    --dark-red: #990026;
-    --ink: #252a34;
-    --text: #293342;
-    --page: #f6f7f9;
-}
+    <style>
+        :root {
+            --red: #cc0033;
+            --dark-red: #990026;
+            --ink: #252a34;
+            --text: #293342;
+            --page: #f6f7f9;
+        }
 
-* { box-sizing: border-box; margin: 0; padding: 0; }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    line-height: 1.65;
-    color: var(--text);
-    background: var(--page);
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-header {
-    background: #cc0033;
-    color: white;
-    text-align: center;
-    padding: 48px 20px 42px;
-}
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.65;
+            color: var(--text);
+            background: var(--page);
+        }
 
-.hero {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
+        header {
+            background: var(--red);
+            color: white;
+            text-align: center;
+            padding: 48px 20px 42px;
+        }
 
-.headshot {
-    display: block;
-    width: 156px;
-    height: 156px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 4px solid white;
-    background: #f0f0f0;
-    box-shadow: 0 4px 16px rgba(0,0,0,.2);
-}
+        .hero {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 15px;
+        }
 
-header h1 {
-    font-size: clamp(2rem, 5vw, 2.8rem);
-    line-height: 1.2;
-    margin-bottom: 8px;
-}
+        .headshot {
+            display: block;
+            width: 156px;
+            height: 156px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+            border: 4px solid white;
+            background: #f0f0f0;
+            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+        }
 
-header p { color: white; font-size: 1.1rem; }
+        header h1 {
+            font-size: clamp(2rem, 5vw, 2.8rem);
+            line-height: 1.2;
+            margin-bottom: 8px;
+        }
 
-nav {
-    background: #252a34;
-    padding: 14px 16px;
-    text-align: center;
-}
+        header p {
+            color: white;
+            font-size: 1.1rem;
+        }
 
-nav a {
-    display: inline-block;
-    color: white;
-    text-decoration: none;
-    margin: 0 18px;
-    font-weight: bold;
-}
+        nav {
+            background: var(--ink);
+            padding: 14px 16px;
+            text-align: center;
+        }
 
-nav a:hover { color: #ffb3c5; }
+        nav a {
+            display: inline-block;
+            color: white;
+            text-decoration: none;
+            margin: 0 18px;
+            font-weight: bold;
+        }
 
-main {
-    width: min(100% - 40px, 960px);
-    margin: 36px auto;
-}
+        nav a:hover,
+        nav a:focus {
+            color: #ffb3c5;
+        }
 
-section {
-    background: white;
-    padding: 30px;
-    margin-bottom: 24px;
-    border-radius: 10px;
-    border-top: 5px solid var(--red);
-    box-shadow: 0 3px 14px rgba(25,32,45,.06);
-}
+        main {
+            width: min(100% - 40px, 960px);
+            margin: 36px auto;
+        }
 
-h2 {
-    color: var(--dark-red);
-    font-size: 1.55rem;
-    margin-bottom: 16px;
-    padding-bottom: 9px;
-    border-bottom: 2px solid #f0c8d2;
-}
+        section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 24px;
+            border-radius: 10px;
+            border-top: 5px solid var(--red);
+            box-shadow: 0 3px 14px rgba(25, 32, 45, 0.06);
+        }
 
-.skills {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-}
+        h2 {
+            color: var(--dark-red);
+            font-size: 1.55rem;
+            margin-bottom: 16px;
+            padding-bottom: 9px;
+            border-bottom: 2px solid #f0c8d2;
+        }
 
-.skill {
-    background: #fff0f3;
-    color: #8f0025;
-    border: 1px solid #efc3cf;
-    padding: 7px 13px;
-    border-radius: 20px;
-    font-size: .94rem;
-}
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
 
-.project {
-    padding: 19px 0;
-    border-bottom: 1px solid #e7e8ec;
-}
+        .skill {
+            display: inline-block;
+            background: #fff0f3;
+            color: #8f0025;
+            border: 1px solid #efc3cf;
+            padding: 7px 13px;
+            border-radius: 20px;
+            font-size: 0.94rem;
+        }
 
-.project:last-child { border-bottom: 0; }
+        .project {
+            padding: 19px 0;
+            border-bottom: 1px solid #e7e8ec;
+        }
 
-.project h3 {
-    color: var(--dark-red);
-    font-size: 1.13rem;
-    margin-bottom: 5px;
-}
+        .project:last-child {
+            border-bottom: none;
+        }
 
-.project-meta {
-    color: #626d7b;
-    font-size: .94rem;
-    margin-bottom: 8px;
-}
+        .project h3 {
+            color: var(--dark-red);
+            font-size: 1.13rem;
+            margin-bottom: 5px;
+        }
 
-footer {
-    background: #252a34;
-    color: #f4e6ea;
-    text-align: center;
-    padding: 22px 16px;
-}
+        .project-meta {
+            color: #626d7b;
+            font-size: 0.94rem;
+            margin-bottom: 8px;
+        }
 
-@media (max-width: 600px) {
-    nav a { margin: 5px 10px; }
-    main { width: calc(100% - 24px); margin: 22px auto; }
-    section { padding: 22px; }
-    .headshot { width: 136px; height: 136px; }
-}
-</style>
+        footer {
+            background: var(--ink);
+            color: #f4e6ea;
+            text-align: center;
+            padding: 22px 16px;
+        }
+
+        @media (max-width: 600px) {
+            nav a {
+                margin: 5px 10px;
+            }
+
+            main {
+                width: calc(100% - 24px);
+                margin: 22px auto;
+            }
+
+            section {
+                padding: 22px;
+            }
+
+            .headshot {
+                width: 136px;
+                height: 136px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-<header>
-    <div class="hero">
-        <img class="headshot" src="headshot.jpg"
-             alt="Headshot of Anthony Aversano">
-        <div>
-            <h1>Anthony Aversano</h1>
-            <p>Rutgers Business School | Finance</p>
+
+    <header>
+        <div class="hero">
+            <img
+                class="headshot"
+                src="./headshot.jpg"
+                alt="Headshot of Anthony Aversano"
+            >
+
+            <div>
+                <h1>Anthony Aversano</h1>
+                <p>Rutgers Business School | Finance</p>
+            </div>
         </div>
-    </div>
-</header>
+    </header>
 
-<nav aria-label="Main navigation">
-    <a href="#about">About</a>
-    <a href="#skills">Skills</a>
-    <a href="#projects">Projects</a>
-</nav>
+    <nav aria-label="Main navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+    </nav>
 
-<main>
-    <section id="about">
-        <h2>Personal Statement</h2>
-        <p>
-            I am a Finance student at Rutgers Business School interested in
-            wealth management and developing the analytical, financial, and
-            relationship-building skills needed to help clients work toward
-            their financial goals.
-        </p>
-    </section>
+    <main>
 
-    <section id="skills">
-        <h2>Skills</h2>
-        <div class="skills">
-            <span class="skill">Financial Services Fundamentals</span>
-            <span class="skill">Banking and Lending Concepts</span>
-            <span class="skill">Customer Service</span>
-            <span class="skill">Communication</span>
-            <span class="skill">Relationship Building</span>
-            <span class="skill">Teamwork</span>
-            <span class="skill">Problem Solving</span>
-            <span class="skill">Microsoft Excel</span>
-        </div>
-    </section>
+        <section id="about">
+            <h2>Personal Statement</h2>
 
-    <section id="projects">
-        <h2>Projects &amp; Professional Development</h2>
-
-        <article class="project">
-            <h3>PNC: Overview of Financial Services and Banking</h3>
-            <p class="project-meta">
-                Forage Job Simulation | September 2026
-            </p>
             <p>
-                Completed a job simulation exploring the financial services
-                industry, banking operations, lending decisions, risk
-                management, regulatory compliance, and customer relationships.
+                I am a Finance student at Rutgers Business School interested
+                in wealth management and developing the analytical, financial,
+                and relationship-building skills needed to help clients work
+                toward their financial goals.
             </p>
-        </article>
+        </section>
 
-        <article class="project">
-            <h3>Bank of America Private Bank Job Simulation</h3>
-            <p class="project-meta">Forage Job Simulation</p>
-            <p>
-                Explored private banking and wealth management through a
-                job simulation focused on client needs, financial planning
-                considerations, and tailored financial solutions.
-            </p>
-        </article>
-    </section>
-</main>
+        <section id="skills">
+            <h2>Skills</h2>
 
-<footer>
-    <p>Anthony Aversano | Rutgers Business School</p>
-</footer>
+            <div class="skills">
+                <span class="skill">Financial Services Fundamentals</span>
+                <span class="skill">Banking and Lending Concepts</span>
+                <span class="skill">Customer Service</span>
+                <span class="skill">Communication</span>
+                <span class="skill">Relationship Building</span>
+                <span class="skill">Teamwork</span>
+                <span class="skill">Problem Solving</span>
+                <span class="skill">Microsoft Excel</span>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects &amp; Professional Development</h2>
+
+            <article class="project">
+                <h3>
+                    PNC: Overview of Financial Services and Banking
+                </h3>
+
+                <p class="project-meta">
+                    Forage Job Simulation | September 2026
+                </p>
+
+                <p>
+                    Completed a job simulation exploring the financial
+                    services industry, banking operations, lending decisions,
+                    risk management, regulatory compliance, and customer
+                    relationships.
+                </p>
+            </article>
+
+            <article class="project">
+                <h3>Bank of America Private Bank Job Simulation</h3>
+
+                <p class="project-meta">
+                    Forage Job Simulation
+                </p>
+
+                <p>
+                    Explored private banking and wealth management through
+                    a job simulation focused on client needs, financial
+                    planning considerations, and tailored financial solutions.
+                </p>
+            </article>
+
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Anthony Aversano | Rutgers Business School</p>
+    </footer>
+
 </body>
 </html>
