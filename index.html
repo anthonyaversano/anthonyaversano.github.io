@@ -5,306 +5,240 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthony Aversano | Finance Portfolio</title>
-
     <style>
-        :root {
-            --red: #cc0033;
-            --dark-red: #990026;
-            --ink: #252a34;
-            --text: #293342;
-            --page: #f6f7f9;
-        }
-
         * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.65;
-            color: var(--text);
-            background: var(--page);
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background-color: #f5f5f5;
         }
 
         header {
-            background: var(--red);
+            background-color: #cc0033;
             color: white;
             text-align: center;
-            padding: 48px 20px 42px;
-        }
-
-        .hero {
-            max-width: 900px;
-            margin: 0 auto;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 15px;
+            padding: 40px 20px;
         }
 
         .headshot {
-            display: block;
-            width: 156px;
-            height: 156px;
+            width: 150px;
+            height: 150px;
             border-radius: 50%;
             object-fit: cover;
-            object-position: center;
             border: 4px solid white;
-            background: #f0f0f0;
-            box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+            margin-bottom: 15px;
         }
 
         header h1 {
-            font-size: clamp(2rem, 5vw, 2.8rem);
-            line-height: 1.2;
-            margin-bottom: 8px;
-        }
-
-        header p {
-            color: white;
-            font-size: 1.1rem;
+            font-size: 2.2rem;
+            margin-bottom: 5px;
         }
 
         nav {
-            background: var(--ink);
-            padding: 14px 16px;
+            background-color: #222;
             text-align: center;
+            padding: 12px;
         }
 
         nav a {
-            display: inline-block;
             color: white;
             text-decoration: none;
-            margin: 0 18px;
+            margin: 0 15px;
             font-weight: bold;
         }
 
-        nav a:hover,
-        nav a:focus {
-            color: #ffb3c5;
+        nav a:hover {
+            color: #ffb3c6;
         }
 
-        main {
-            width: min(100% - 40px, 960px);
-            margin: 36px auto;
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            padding: 0 20px;
         }
 
         section {
             background: white;
-            padding: 30px;
-            margin-bottom: 24px;
-            border-radius: 10px;
-            border-top: 5px solid var(--red);
-            box-shadow: 0 3px 14px rgba(25, 32, 45, 0.06);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
         }
 
         h2 {
-            color: var(--dark-red);
-            font-size: 1.55rem;
-            margin-bottom: 16px;
-            padding-bottom: 9px;
-            border-bottom: 2px solid #f0c8d2;
+            color: #cc0033;
+            margin-bottom: 15px;
+            border-bottom: 2px solid #cc0033;
+            padding-bottom: 8px;
         }
 
-        .skills {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
-        }
-
-        .skill {
-            display: inline-block;
-            background: #fff0f3;
-            color: #8f0025;
-            border: 1px solid #efc3cf;
-            padding: 7px 13px;
-            border-radius: 20px;
-            font-size: 0.94rem;
+        ul {
+            padding-left: 25px;
         }
 
         .project {
-            padding: 22px 0;
-            border-bottom: 1px solid #e7e8ec;
-        }
-
-        .project:first-of-type {
-            padding-top: 0;
+            margin-bottom: 25px;
         }
 
         .project:last-child {
-            border-bottom: none;
-            padding-bottom: 0;
+            margin-bottom: 0;
         }
 
         .project h3 {
-            color: var(--dark-red);
-            font-size: 1.13rem;
             margin-bottom: 5px;
         }
 
         .project-meta {
-            color: #626d7b;
-            font-size: 0.94rem;
-            margin-bottom: 8px;
+            color: #666;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
         }
 
-        .certificate-link {
-            display: inline-block;
-            margin-top: 10px;
-            background: var(--red);
-            color: white;
-            text-decoration: none;
+        .project a,
+        .linkedin-link {
+            color: #cc0033;
             font-weight: bold;
-            padding: 8px 14px;
-            border-radius: 5px;
         }
 
-        .certificate-link:hover,
-        .certificate-link:focus {
-            background: var(--dark-red);
+        .linkedin-link {
+            display: inline-block;
+            margin-top: 12px;
         }
 
         footer {
-            background: var(--ink);
-            color: #f4e6ea;
+            background-color: #222;
+            color: white;
             text-align: center;
-            padding: 22px 16px;
+            padding: 20px;
+            margin-top: 30px;
         }
 
         @media (max-width: 600px) {
-            nav a {
-                margin: 5px 10px;
+            header h1 {
+                font-size: 1.8rem;
             }
 
-            main {
-                width: calc(100% - 24px);
-                margin: 22px auto;
+            nav a {
+                display: inline-block;
+                margin: 5px 8px;
             }
 
             section {
-                padding: 22px;
-            }
-
-            .headshot {
-                width: 136px;
-                height: 136px;
+                padding: 20px;
             }
         }
     </style>
 </head>
-
 <body>
 
     <header>
-        <div class="hero">
-            <img
-                class="headshot"
-                src="./headshot.jpg"
-                alt="Headshot of Anthony Aversano"
-            >
-
-            <div>
-                <h1>Anthony Aversano</h1>
-                <p>Rutgers Business School | Finance</p>
-            </div>
-        </div>
+        <img src="./headshot.jpg" alt="Anthony Aversano" class="headshot">
+        <h1>Anthony Aversano</h1>
+        <p>Rutgers Business School | Finance</p>
+        <p>Class of 2029 (Expected)</p>
+        <a
+            class="linkedin-link"
+            href="https://www.linkedin.com/in/anthony-aversano"
+            target="_blank"
+            rel="noopener noreferrer"
+            style="color: white;"
+        >LinkedIn Profile</a>
     </header>
 
-    <nav aria-label="Main navigation">
-        <a href="#about">About</a>
+    <nav>
+        <a href="#about">About Me</a>
         <a href="#skills">Skills</a>
         <a href="#projects">Projects</a>
+        <a href="#contact">Contact</a>
     </nav>
 
-    <main>
+    <main class="container">
 
         <section id="about">
-            <h2>Personal Statement</h2>
-
+            <h2>About Me</h2>
             <p>
-                I am a Finance student at Rutgers Business School interested
-                in wealth management and developing the analytical, financial,
-                and relationship-building skills needed to help clients work
-                toward their financial goals.
+                I am a Finance student at Rutgers Business School interested in
+                wealth management and developing the analytical, financial, and
+                relationship-building skills needed to help clients work toward
+                their financial goals.
             </p>
         </section>
 
         <section id="skills">
             <h2>Skills</h2>
-
-            <div class="skills">
-                <span class="skill">Financial Services Fundamentals</span>
-                <span class="skill">Banking and Lending Concepts</span>
-                <span class="skill">Customer Service</span>
-                <span class="skill">Communication</span>
-                <span class="skill">Relationship Building</span>
-                <span class="skill">Teamwork</span>
-                <span class="skill">Problem Solving</span>
-                <span class="skill">Microsoft Excel</span>
-            </div>
+            <ul>
+                <li>Financial Services Fundamentals</li>
+                <li>Banking and Lending Concepts</li>
+                <li>Customer Service</li>
+                <li>Communication</li>
+                <li>Relationship Building</li>
+                <li>Teamwork</li>
+                <li>Problem Solving</li>
+                <li>Microsoft Excel</li>
+            </ul>
         </section>
 
         <section id="projects">
-            <h2>Projects &amp; Professional Development</h2>
+            <h2>Projects</h2>
 
-            <article class="project">
+            <div class="project">
                 <h3>PNC: Overview of Financial Services and Banking</h3>
-
                 <p class="project-meta">
                     Forage Job Simulation | September 12, 2026
                 </p>
-
                 <p>
                     Explored the financial services industry and banking
                     operations, including lending decisions, risk management,
                     regulatory compliance, and customer relationships.
                 </p>
+                <p>
+                    <a href="./pnc-certificate.pdf" target="_blank">
+                        View Certificate
+                    </a>
+                </p>
+            </div>
 
-                <a
-                    class="certificate-link"
-                    href="./pnc-certificate.pdf"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                >
-                    View Certificate
-                </a>
-            </article>
-
-            <article class="project">
+            <div class="project">
                 <h3>Bank of America: The Private Bank</h3>
-
                 <p class="project-meta">
                     Forage Job Simulation | May 2, 2026
                 </p>
-
                 <p>
-                    Explored private banking through client account servicing
-                    and communication, identifying client goals and priorities,
-                    and matching client goals to appropriate strategies.
+                    Practiced client account servicing and communication,
+                    identifying client goals and priorities, and matching
+                    client needs with appropriate financial strategies.
                 </p>
+                <p>
+                    <a href="./private-bank-certificate.pdf" target="_blank">
+                        View Certificate
+                    </a>
+                </p>
+            </div>
+        </section>
 
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Connect with me on
                 <a
-                    class="certificate-link"
-                    href="./private-bank-certificate.pdf"
+                    href="https://www.linkedin.com/in/anthony-aversano"
                     target="_blank"
                     rel="noopener noreferrer"
-                >
-                    View Certificate
-                </a>
-            </article>
-
+                    class="linkedin-link"
+                >LinkedIn</a>.
+            </p>
         </section>
 
     </main>
 
     <footer>
-        <p>Anthony Aversano | Rutgers Business School</p>
+        <p>&copy; 2026 Anthony Aversano</p>
     </footer>
 
 </body>
