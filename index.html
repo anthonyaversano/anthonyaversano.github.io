@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Anthony Aversano | Finance Portfolio</title>
+
     <style>
         * {
             box-sizing: border-box;
@@ -101,21 +102,26 @@
         }
 
         .project a,
-        .linkedin-link {
+        #contact a {
             color: #cc0033;
             font-weight: bold;
+            text-decoration: none;
         }
 
-        .linkedin-link {
-            display: inline-block;
-            margin-top: 12px;
+        .project a:hover,
+        #contact a:hover {
+            text-decoration: underline;
+        }
+
+        .contact-item {
+            margin-bottom: 10px;
         }
 
         footer {
             background-color: #222;
             color: white;
             text-align: center;
-            padding: 20px;
+            padding: 18px;
             margin-top: 30px;
         }
 
@@ -135,6 +141,7 @@
         }
     </style>
 </head>
+
 <body>
 
     <header>
@@ -142,13 +149,6 @@
         <h1>Anthony Aversano</h1>
         <p>Rutgers Business School | Finance</p>
         <p>Class of 2029 (Expected)</p>
-        <a
-            class="linkedin-link"
-            href="https://www.linkedin.com/in/anthony-aversano"
-            target="_blank"
-            rel="noopener noreferrer"
-            style="color: white;"
-        >LinkedIn Profile</a>
     </header>
 
     <nav>
@@ -224,21 +224,28 @@
 
         <section id="contact">
             <h2>Contact</h2>
-            <p>
-                Connect with me on
+
+            <p class="contact-item">
+                <strong>Email:</strong>
+                <a href="mailto:anthonyaversano25@gmail.coom">anthonyaversano25@gmail.com</a>
+            </p>
+
+            <p class="contact-item">
+                <strong>LinkedIn:</strong>
                 <a
                     href="https://www.linkedin.com/in/anthony-aversano"
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="linkedin-link"
-                >LinkedIn</a>.
+                >
+                    LinkedIn Profile
+                </a>
             </p>
         </section>
 
     </main>
 
     <footer>
-        <p>&copy; 2026 Anthony Aversano</p>
+        <p>Rutgers Business School | Finance</p>
     </footer>
 
 </body>
